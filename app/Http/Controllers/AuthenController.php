@@ -56,7 +56,7 @@ class AuthenController extends Controller
             $request->session()->regenerate();
             return redirect()->intended('dashboard')->with('success_message', 'Login successful!');
         } else {
-            return back()->with('fail', 'Invalid email or password.');
+            return back()->with('error_message', 'Invalid email or password.');
         }
     }
 

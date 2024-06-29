@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
  * Route for task
  */
 
+Route::get("/", function () {
+    return view("welcome");
+});
 Route::get('registration', [AuthenController::class, 'registration'])->name('register');
 Route::post('register-user', [AuthenController::class, 'registerUser'])->name('register-user');
 
